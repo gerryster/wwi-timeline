@@ -9,6 +9,8 @@
     * aviation: ie. intercepter gear
     * maratime: ie. unrestricted submarine warfare
  * Active theaters
+ * Weather
+  * [Battle weather in Western Europe. 9 months, August 1914 to april 1915](http://onlinelibrary.wiley.com/doi/10.1002/qj.49704117606/abstract): paywalled $6 - $38
 
  ## Prior Art
   * [Interactive WWI Timeline](https://www.theworldwar.org/explore/interactive-wwi-timeline) from The National WWI Museum and Memorial in Kansas City.
