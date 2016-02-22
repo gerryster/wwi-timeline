@@ -14,3 +14,4 @@
 
  ## Prior Art
   * [Interactive WWI Timeline](https://www.theworldwar.org/explore/interactive-wwi-timeline) from The National WWI Museum and Memorial in Kansas City.
+  * [Interactive: Commonwealth deaths during the first world war]( http://www.theguardian.com/news/datablog/interactive/2013/nov/11/commonwealth-deaths-first-world-war-interactive)
