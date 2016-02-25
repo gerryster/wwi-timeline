@@ -1,0 +1,6 @@
+.timeline {
+  background-color: #737272;
+  height: 150px;
+  overflow: scroll;
+  width: 100%
+}
