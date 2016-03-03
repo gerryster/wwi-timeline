@@ -37,6 +37,6 @@ module.exports = {
   },
   module: {},
   postcss: function () {
-    return [];
+    return [require('autoprefixer'), require('precss')];
   }
 };

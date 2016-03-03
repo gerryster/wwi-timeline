@@ -68,6 +68,8 @@
     "lodash": "^4.6.1",
     "moment": "^2.11.2",
     "normalize.css": "^3.0.3",
+    "postcss-cssnext": "^2.4.0",
+    "precss": "^1.4.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.4.0",
