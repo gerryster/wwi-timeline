@@ -8,7 +8,7 @@ I am creating this project as a way to learn Redux and more about WWI.
 
 ## Usage
 
-This project was created with the [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) Yoeman generator per 114164fd7994e5f62927260cd8b8795a7abe1fc9. See the documentation in that project for how to run and test this project.
+This project was created with the [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) Yoeman generator per [this commit](https://github.com/gerryster/wwi-timeline/commit/114164fd7994e5f62927260cd8b8795a7abe1fc9). See the documentation in that project for how to run and test this project.
 
 ## Why World War One?
 
