@@ -1,5 +1,6 @@
 require('styles/Timeline.css');
 
+import Month from './Month.js'
 //import moment from 'moment';
 //var moment = require('moment');
 import React from 'react';
@@ -28,6 +29,7 @@ class Timeline extends React.Component {
       const widthCss = { width: `${(YEARS_TO_DAYS[year] * DAY_WIDTH) - BORDER_WIDTH}px`};
       return (<div className="year" style={widthCss} key={year}>
         {year}
+        <Months dayWidth={DAY_WIDTH} startDate={42} endDate={42}/>
       </div>);
     });
   }
