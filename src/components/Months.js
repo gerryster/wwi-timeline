@@ -1,4 +1,4 @@
-require('styles/Timeline.css');
+//require('styles/Timeline.css');
 
 import React from 'react';
 import _ from 'lodash';
@@ -7,7 +7,7 @@ const Months = (props) => {
 
 };
 
-Timeline.defaultProps = {
+Months.defaultProps = {
 };
 
-export default Timeline;
+export default Months;
