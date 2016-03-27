@@ -47,7 +47,8 @@ module.exports = {
       sources: srcPath + 'sources/',
       stores: srcPath + 'stores/',
       styles: srcPath + 'styles/',
-      config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
+      config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV,
+      models: srcPath + 'models/'
     }
   },
   plugins: [
