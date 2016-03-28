@@ -1658,6 +1658,18 @@
       "from": "fresh@0.3.0",
       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.3.0.tgz"
     },
+    "frozen-moment": {
+      "version": "0.3.0",
+      "from": "frozen-moment@latest",
+      "resolved": "https://registry.npmjs.org/frozen-moment/-/frozen-moment-0.3.0.tgz",
+      "dependencies": {
+        "moment": {
+          "version": "2.10.6",
+          "from": "moment@>=2.10.0 <2.11.0",
+          "resolved": "https://registry.npmjs.org/moment/-/moment-2.10.6.tgz"
+        }
+      }
+    },
     "fs-extra": {
       "version": "0.26.5",
       "from": "fs-extra@>=0.26.4 <0.27.0",
