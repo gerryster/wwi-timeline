@@ -15,7 +15,7 @@ const Year = ({ warYear }) => {
   return (
     <div className="year" style={widthCss} key={warYear.year()}>
       {warYear.year()}
-      {warYear.eachMonth((warMonth) => (
+      {warYear.months().map((warMonth) => (
         <Month warMonth={warMonth} key={warYear.year() + warMonth.month()}/>)
       )}
     </div>

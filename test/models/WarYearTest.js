@@ -35,9 +35,8 @@ describe('WarYear', () => {
         ['1914-11-01', '1914-11-30'],
         ['1914-12-01', '1914-12-31'],
       ];
-      const foundMonths = [];
-      Y1914.eachMonth((month) => (
-        foundMonths.push([month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')])
+      const foundMonths = Y1914.months().map((month) => (
+        [month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')]
       ));
       expect(expectedMonths).to.eql(foundMonths);
     });
@@ -56,9 +55,8 @@ describe('WarYear', () => {
         ['1918-10-01', '1918-10-31'],
         ['1918-11-01', '1918-11-11'],
       ];
-      const foundMonths = [];
-      Y1918.eachMonth((month) => (
-        foundMonths.push([month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')])
+      const foundMonths = Y1918.months().map((month) => (
+        [month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')]
       ));
       expect(expectedMonths).to.eql(foundMonths);
     });

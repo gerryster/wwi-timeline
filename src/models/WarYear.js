@@ -18,14 +18,18 @@ WarYear.prototype.numDays = function() {
   return this.endDate.add('1', 'days').diff(this.startDate, 'days');
 }
 
-WarYear.prototype.eachMonth = function(iterator) {
+WarYear.prototype.months = function() {
+  const months = [];
+
   let currentMonthStartDate = this.startDate;
   while(currentMonthStartDate.isBefore(this.endDate)) {
     const monthEndDate = this._determineMonthEnd(currentMonthStartDate);
-    iterator.call(undefined, new WarMonth(currentMonthStartDate, monthEndDate));
+    months.push(new WarMonth(currentMonthStartDate, monthEndDate));
 
     currentMonthStartDate = monthEndDate.add(1, 'day');
   }
+
+  return months;
 }
 
 WarYear.prototype._determineMonthEnd = function(month) {
