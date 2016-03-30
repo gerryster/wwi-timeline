@@ -5,6 +5,10 @@ const WarMonth = function(startDate, endDate) {
   this.endDate = endDate.freeze();
 };
 
+WarMonth.prototype.year = function() {
+  return this.startDate.year();
+}
+
 WarMonth.prototype.month = function() {
   return this.startDate.month();
 }

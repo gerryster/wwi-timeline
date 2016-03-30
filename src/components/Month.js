@@ -1,13 +1,22 @@
-//require('styles/Timeline.css');
+import { DAY_WIDTH } from './Timeline'
 
-import React from 'react';
-import _ from 'lodash';
+import React, { PropTypes } from 'react';
 
-const Month = (props) => {
-  return <div/>;
+const propTypes = {
+  warMonth: PropTypes.object.isRequired,
 };
 
-Month.defaultProps = {
+const BORDER_WIDTH = 1;
+
+const Month = ({ warMonth }) => {
+  const widthCss = { width: `${(warMonth.numDays() * DAY_WIDTH) - BORDER_WIDTH}px`};
+
+  return (
+    <div className="duration month" style={widthCss} key={warMonth.year() + warMonth.month()}>
+      {warMonth.month()}
+    </div>
+  )
 };
 
+Month.propTypes = propTypes;
 export default Month;

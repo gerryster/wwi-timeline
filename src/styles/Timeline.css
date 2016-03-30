@@ -9,10 +9,21 @@
   width: 100%
 }
 
-.timeline .year {
-  height: var(--timeline-height);
+.timeline .duration {
   border-right: 1px solid white;
   padding: 0;
   margin: 0;
   float: left;
+}
+
+.timeline .duration:last-child {
+  border-right: none;
+}
+
+.timeline .year {
+  height: var(--timeline-height);
+}
+
+.timeline .month {
+  height: 100px; /* TODO: figure out how to create an expression to subtract from timeline-height. */
 }

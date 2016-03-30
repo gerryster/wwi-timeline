@@ -5,7 +5,7 @@ import WarYear from 'models/WarYear';
 
 import React from 'react';
 
-const DAY_WIDTH = 2;
+export const DAY_WIDTH = 2;
 const DAYS_IN_WAR = 1567
 
 class Timeline extends React.Component {
