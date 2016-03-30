@@ -3,7 +3,7 @@
 /*eslint no-console: 0*/
 'use strict';
 
-import WarYear, {Y1914, Y1916} from 'models/WarYear';
+import WarYear, {Y1914, Y1916, Y1918} from 'models/WarYear';
 
 import moment from 'frozen-moment';
 
@@ -37,6 +37,27 @@ describe('WarYear', () => {
       ];
       const foundMonths = [];
       Y1914.eachMonth((month) => (
+        foundMonths.push([month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')])
+      ));
+      expect(expectedMonths).to.eql(foundMonths);
+    });
+
+    it('finds the correct months for 1918', () => {
+      const expectedMonths = [
+        ['1918-01-01', '1918-01-31'],
+        ['1918-02-01', '1918-02-28'],
+        ['1918-03-01', '1918-03-31'],
+        ['1918-04-01', '1918-04-30'],
+        ['1918-05-01', '1918-05-31'],
+        ['1918-06-01', '1918-06-30'],
+        ['1918-07-01', '1918-07-31'],
+        ['1918-08-01', '1918-08-31'],
+        ['1918-09-01', '1918-09-30'],
+        ['1918-10-01', '1918-10-31'],
+        ['1918-11-01', '1918-11-11'],
+      ];
+      const foundMonths = [];
+      Y1918.eachMonth((month) => (
         foundMonths.push([month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')])
       ));
       expect(expectedMonths).to.eql(foundMonths);

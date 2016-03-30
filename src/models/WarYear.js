@@ -20,12 +20,19 @@ WarYear.prototype.numDays = function() {
 
 WarYear.prototype.eachMonth = function(iterator) {
   let currentMonthStartDate = this.startDate;
-  while(currentMonthStartDate.year() === this.year()) {
-    const monthEndDate = currentMonthStartDate.endOf( 'months').startOf('day');
+  while(currentMonthStartDate.isBefore(this.endDate)) {
+    const monthEndDate = this._determineMonthEnd(currentMonthStartDate);
     iterator.call(undefined, new WarMonth(currentMonthStartDate, monthEndDate));
 
     currentMonthStartDate = monthEndDate.add(1, 'day');
   }
+}
+
+WarYear.prototype._determineMonthEnd = function(month) {
+  if(month.month() == this.endDate.month()) { // war end case
+    return this.endDate;
+  }
+  return month.endOf('months').startOf('day');
 }
 
 export const Y1914 = new WarYear(moment('1914-07-28'), moment('1914-12-31'));
