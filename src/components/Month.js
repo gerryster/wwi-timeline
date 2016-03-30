@@ -3,11 +3,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-const Months = (props) => {
+const Month = (props) => {
 
 };
 
-Months.defaultProps = {
+Month.defaultProps = {
 };
 
-export default Months;
+export default Month;

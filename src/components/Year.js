@@ -1,3 +1,5 @@
+import Month from './Month'
+
 import React, { PropTypes } from 'react';
 
 const propTypes = {
@@ -13,7 +15,9 @@ const Year = ({ warYear }) => {
   return (
     <div className="year" style={widthCss} key={warYear.year()}>
       {warYear.year()}
-      {/*<Months dayWidth={DAY_WIDTH} startDate={42} endDate={42}/>*/}
+      {warYear.eachMonth((warMonth) => (
+        <Month warMonth={warMonth} key={warYear.year() + warMonth.month()}/>)
+      )}
     </div>
   );
 }

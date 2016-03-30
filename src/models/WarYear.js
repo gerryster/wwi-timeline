@@ -1,5 +1,7 @@
 'use strict';
 
+import WarMonth from './WarMonth';
+
 import moment from 'frozen-moment';
 
 const WarYear = function(startDate, endDate) {
@@ -14,6 +16,16 @@ WarYear.prototype.year = function() {
 WarYear.prototype.numDays = function() {
   // add one day to the end as this is inclusive:
   return this.endDate.add('1', 'days').diff(this.startDate, 'days');
+}
+
+WarYear.prototype.eachMonth = function(iterator) {
+  let currentMonthStartDate = this.startDate;
+  while(currentMonthStartDate.year() === this.year()) {
+    const monthEndDate = currentMonthStartDate.endOf( 'months').startOf('day');
+    iterator.call(undefined, new WarMonth(currentMonthStartDate, monthEndDate));
+
+    currentMonthStartDate = monthEndDate.add(1, 'day');
+  }
 }
 
 export const Y1914 = new WarYear(moment('1914-07-28'), moment('1914-12-31'));
