@@ -10,11 +10,12 @@ const propTypes = {
 const BORDER_WIDTH = 1;
 
 const Year = ({ warYear }) => {
-  const widthCss = { width: `${(warYear.numDays() * DAY_WIDTH) - BORDER_WIDTH}px`};
+  const contentWidth = warYear.numDays() * DAY_WIDTH;
 
   return (
-    <div className="duration year" style={widthCss} key={warYear.year()}>
-      {warYear.year()}
+    <div className="duration year" style={{width: `${contentWidth - BORDER_WIDTH}px`}}
+        key={warYear.year()}>
+      <div className="label-header" style={{width: `${contentWidth}px`}}>{warYear.year()}</div>
       {warYear.months().map((warMonth) => ( <Month warMonth={warMonth} />) )}
     </div>
   );
