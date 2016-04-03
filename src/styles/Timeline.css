@@ -10,15 +10,15 @@
 }
 
 .timeline .duration {
-  border-right: 1px solid white;
+  border-left: 1px solid white;
   padding: 0;
   margin: 0;
   float: left;
   box-sizing: border-box;
 }
 
-.timeline .duration:last-child {
-  border-right: none;
+.timeline .duration:first-child {
+  border-left: none;
 }
 
 .timeline .year {
@@ -34,4 +34,8 @@
 .timeline .month {
   padding-left: 3px;
   height: 100px; /* TODO: figure out how to create an expression to subtract from timeline-height. */
+}
+
+.timeline .month.first-month {
+  border-left: none;
 }

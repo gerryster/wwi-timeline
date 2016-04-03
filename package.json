@@ -64,6 +64,7 @@
     "postcss-loader": "^0.8.0"
   },
   "dependencies": {
+    "classnames": "^2.2.3",
     "core-js": "^2.0.0",
     "frozen-moment": "^0.3.0",
     "lodash": "^4.6.1",
