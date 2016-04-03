@@ -10,7 +10,7 @@ WarMonth.prototype.year = function() {
 }
 
 WarMonth.prototype.month = function() {
-  return this.startDate.month();
+  return this.startDate.month() + 1 // convert to one based months
 }
 
 WarMonth.prototype.numDays = function() {
