@@ -17,7 +17,9 @@ const Year = ({ warYear }) => {
         key={warYear.year()}>
       <div className="label-header" style={{width: `${contentWidth}px`}}>{warYear.year()}</div>
       {warYear.months().map((warMonth) => (
-        <Month warMonth={warMonth} firstMonth={warMonth.startDate.month() === warYear.startDate.month()} />
+        <Month warMonth={warMonth}
+               firstMonth={warMonth.startDate.month() === warYear.startDate.month()}
+               key={warMonth.year() + warMonth.month()}/>
       ))}
     </div>
   );

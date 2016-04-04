@@ -20,7 +20,7 @@ const Month = ({ warMonth, firstMonth }) => {
   });
 
   return (
-    <div className={monthClasses} style={widthCss} key={warMonth.year() + warMonth.month()}>
+    <div className={monthClasses} style={widthCss}>
       {warMonth.numDays() > 8 && warMonth.startDate.format('MMM')}
     </div>
   )
