@@ -10,10 +10,13 @@ const propTypes = {
 const DIVIDER_WIDTH = 1;
 const SemiMonth = ({ warMonth, contianerStartWidth }) => {
   if(warMonth.numDays() >= 15) { // works for WWI but not for a generic timeline
+    const totalWidth = warMonth.numDays() * DAY_WIDTH;
+    const halfwayPoint = Math.floor( totalWidth / 2 );
     return (
       <div className="semi-month">
-        <div className="first-half duration" style={{width: `${15 * DAY_WIDTH - contianerStartWidth}px`}}/>
-        <div className="second-half duration" style={{width: `${(warMonth.numDays() - 15) * DAY_WIDTH - DIVIDER_WIDTH}px`}}/>
+        <div className="first-half duration"
+          style={{width: `${totalWidth - halfwayPoint - contianerStartWidth - DIVIDER_WIDTH}px`}}/>
+        <div className="second-half duration" style={{width: `${totalWidth - halfwayPoint}px`}}/>
       </div>
     );
   } else {
