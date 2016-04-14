@@ -1,6 +1,6 @@
 'use strict';
 
-export class Duration {
+export default class Duration {
   constructor(startDate, endDate) {
     this.startDate = startDate.freeze();
     this.endDate = endDate.freeze();
