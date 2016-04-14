@@ -1,10 +1,8 @@
 'use strict';
 
-import WarMonth from './WarMonth';
-
 import moment from 'frozen-moment';
 
-export default class WarYear {
+class Duration {
   constructor(startDate, endDate) {
     this.startDate = startDate.freeze();
     this.endDate = endDate.freeze();
@@ -14,18 +12,24 @@ export default class WarYear {
     return this.startDate.year();
   }
 
+  month() {
+    return this.startDate.month() + 1 // convert to one based months
+  }
+
   numDays() {
     // add one day to the end as this is inclusive:
     return this.endDate.add('1', 'days').diff(this.startDate, 'days');
   }
+}
 
+export default class WarYear extends Duration {
   months() {
     const months = [];
 
     let currentMonthStartDate = this.startDate;
     while(currentMonthStartDate.isBefore(this.endDate)) {
       const monthEndDate = this._determineMonthEnd(currentMonthStartDate);
-      months.push(new WarMonth(currentMonthStartDate, monthEndDate));
+      months.push(new Duration(currentMonthStartDate, monthEndDate));
 
       currentMonthStartDate = monthEndDate.add(1, 'day');
     }
