@@ -5,8 +5,6 @@
 
 import WarYear, {Y1914, Y1916, Y1918} from 'models/WarYear';
 
-import moment from 'frozen-moment';
-
 describe('WarYear', () => {
   describe('.allYearsInOrder() static method', () => {
     it('returns years 1914,1915,1916,1917, and 1918', () => {

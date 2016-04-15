@@ -29,10 +29,6 @@ export default class WarYear extends Duration {
   static allYearsInOrder() {
     return [Y1914, Y1915, Y1916, Y1917, Y1918];
   }
-
-  static allWeeks() {
-    return [];
-  }
 }
 
 export const Y1914 = new WarYear(moment('1914-07-28'), moment('1914-12-31'));

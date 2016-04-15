@@ -1,7 +1,7 @@
 require('styles/Timeline.css');
 
 import Year from './Year'
-import WarYear from 'models/WarYear';
+import TimelineModel from 'models/Timeline';
 
 import React from 'react';
 
@@ -13,10 +13,13 @@ class Timeline extends React.Component {
     const overallWidthCss = { width: `${(DAYS_IN_WAR * DAY_WIDTH) + 30}px`};
     return (
       <div className="timeline">
-        <div className="timeline-content" style={overallWidthCss}>
-          {WarYear.allYearsInOrder().map((warYear) => (
+        <div className="years-container" style={overallWidthCss}>
+          {TimelineModel.allYears().map((warYear) => (
             <Year warYear={warYear} key={warYear.year()}/>
           ))}
+        </div>
+          {/* TimelineModel.allWeeks().map((weekDuration) => <Week weekDuration={weekDuration} /> ) */}
+        <div>
         </div>
       </div>
     );
