@@ -1,5 +1,5 @@
 import Month from './Month'
-import { DAY_WIDTH } from './Timeline'
+import { DAY_WIDTH } from '../Timeline'
 
 import React, { PropTypes } from 'react';
 

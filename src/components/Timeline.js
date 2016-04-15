@@ -1,6 +1,6 @@
 require('styles/Timeline.css');
 
-import Year from './Year'
+import Year from './Timeline/Year'
 import TimelineModel from 'models/Timeline';
 
 import React from 'react';

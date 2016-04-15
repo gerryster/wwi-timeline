@@ -1,4 +1,4 @@
-import { DAY_WIDTH } from './Timeline';
+import { DAY_WIDTH } from '../Timeline';
 import { BORDER_WIDTH as YEAR_BORDER_WIDTH } from './Year';
 import SemiMonth from './SemiMonth';
 
