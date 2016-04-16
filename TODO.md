@@ -1,7 +1,7 @@
 # Features
-* [ ] move the connect logic into Timeline/Week
-* [ ] TimelineWeek should show the currently selected Week
+* [ ] TimelineWeek should remain highlighted when it is selected
 * [ ] Start pulling content from a DB
+* [ ] Prelude to War and Aftermath sections
 * [ ] WYSIWYG content editing
 * [ ] Casualties graph
 
@@ -10,6 +10,7 @@
 * [ ] improve typeface
 
 # Tech
+* [ ] move the connect logic into Timeline/Week
 * [ ] setup the Redux devtools: https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
 * [ ] get `npm run test:dev` working
 * [ ] DRY up resolve in config/test.js
