@@ -1,3 +1,4 @@
+* [ ] setup the Redux devtools: https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
 * [ ] get `npm run test:dev` working
 * [ ] DRY up resolve in config/test.js
 * [ ] use ES6 classes
