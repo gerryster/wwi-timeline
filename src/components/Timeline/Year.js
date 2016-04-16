@@ -13,8 +13,7 @@ const Year = ({ warYear }) => {
   const contentWidth = warYear.numDays() * DAY_WIDTH;
 
   return (
-    <div className="duration year" style={{width: `${contentWidth}px`}}
-        key={warYear.year()}>
+    <div className="duration year" style={{width: `${contentWidth}px`}}>
       <div className="label-header" style={{width: `${contentWidth}px`}}>{warYear.year()}</div>
       {warYear.months().map((warMonth) => (
         <Month warMonth={warMonth}

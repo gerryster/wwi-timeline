@@ -1,6 +1,8 @@
 require('styles/Timeline.css');
 
+import Week from './Timeline/Week';
 import Year from './Timeline/Year'
+
 import TimelineModel from 'models/Timeline';
 
 import React from 'react';
@@ -18,8 +20,10 @@ class Timeline extends React.Component {
             <Year warYear={warYear} key={warYear.year()}/>
           ))}
         </div>
-          {/* TimelineModel.allWeeks().map((weekDuration) => <Week weekDuration={weekDuration} /> ) */}
-        <div>
+        <div className="weeks-container" style={overallWidthCss}>
+          {TimelineModel.allWeeks().map((weekDuration) => (
+            <Week weekDuration={weekDuration} key={weekDuration.startDate.format('YYYY-MM-DD')}/>
+          ))}
         </div>
       </div>
     );

@@ -51,3 +51,32 @@
 .timeline .month .semi-month .first-half {
   border-left: none; /* the border comes from the month start */
 }
+
+.timeline .weeks-container {
+  position: absolute;
+}
+
+.timeline .week {
+  height: var(--timeline-height);
+  border: none;
+  position: relative; /* anchor for the label-header */
+}
+
+.timeline .week:hover {
+  background: lightblue;
+  opacity: 0.4;
+}
+
+.timeline .week .label-header {
+  display: none;
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  width: 10em;
+  color: white;
+  z-index: 100;
+}
+
+.timeline .week:hover .label-header {
+  display: block;
+}
