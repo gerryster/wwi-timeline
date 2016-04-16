@@ -6,12 +6,14 @@
 * [ ] Casualties graph
 
 # UI
-* [ ] clean up the week display labels in Timeline/Week
+* [ ] clean up the week display labels in Timeline/Week. See http://jsbin.com/qeluce/3/edit?html,css,output
 * [ ] improve typeface
 
 # Tech
 * [ ] move the connect logic into Timeline/Week
 * [ ] setup the Redux devtools: https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
+* [ ] upgrade to the latest React
+* [ ] upgrade to the latest Node
 * [ ] get `npm run test:dev` working
 * [ ] DRY up resolve in config/test.js
 * [ ] use ES6 classes
