@@ -1,12 +1,16 @@
-/* Combine all available reducers to a single root reducer.
- *
- * CAUTION: When using the generators, this file is modified in some places.
- *          This is done via AST traversal - Some of your formatting may be lost
- *          in the process - no functionality should be broken though.
- *          This modifications only run once when the generator is invoked - if
- *          you edit them, they are not updated again.
- */
+/* Combine all available reducers to a single root reducer. */
 import { combineReducers } from 'redux';
 /* Populated by react-webpack-redux:reducer */
-const reducers = {};
+
+const currentWeek = (state='initial', action) => {
+  console.log("state: ", state, ", action: ", action);
+  switch (action.type) {
+    case 'SET_CURRENT_WEEK':
+      return action
+    default:
+      return state;
+  }
+};
+
+const reducers = { currentWeek };
 module.exports = combineReducers(reducers);
