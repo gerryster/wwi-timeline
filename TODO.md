@@ -1,6 +1,7 @@
 # Features
 * [ ] TimelineWeek should remain highlighted when it is selected
 * [ ] Start pulling content from a DB
+* [ ] battles
 * [ ] Prelude to War and Aftermath sections
 * [ ] WYSIWYG content editing
 * [ ] Casualties graph
