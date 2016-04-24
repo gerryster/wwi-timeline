@@ -1,6 +1,10 @@
+# Immediate
+* [ ] display current week content
+  * [ ] extract the currentWeek reducer into its own file
+  * [ ] create a unit test which verifies that when content is loaded, the data structure looks correct
+
 # Features
 * [ ] TimelineWeek should remain highlighted when it is selected
-* [ ] Start pulling content from a DB
 * [ ] battles
 * [ ] Prelude to War and Aftermath sections
 * [ ] WYSIWYG content editing
@@ -20,6 +24,7 @@
 * [ ] use ES6 classes
 
 # Done
+* [x] Start pulling content from a DB
 * [x] move Timeline sub elements to a sub directory
 * [x] create weeks!
 * [x] configure jslint to prefer trailing commas
