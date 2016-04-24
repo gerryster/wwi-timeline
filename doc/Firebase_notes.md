@@ -16,6 +16,7 @@ ref.orderByChild("startDate").startAt("1914-07").endAt("1914-07\uf8ff").on("chil
 1. Simple: fbRef.once("value", ...) and then dispatch a data loaded event with snapshot.val().
 1. Look into [ReactFire](https://www.firebase.com/docs/web/libraries/react/). Possibly not the best fit with Redux.
 1. One of the Redux Firebase libraries?
+1. This had some ideas for auth: http://blog.krawaller.se/posts/a-react-redux-firebase-app-with-authentication/
 
 ## How to store app state
 
