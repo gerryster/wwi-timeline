@@ -4,12 +4,14 @@ require('styles/App.css');
 import Timeline from './Timeline';
 import WeekContent from './WeekContent';
 
+import config from 'config';
+
 import Firebase from 'firebase';
 import React from 'react';
 
 class AppComponent extends React.Component {
   componentDidMount() {
-    const contentRef = new Firebase('https://wwi-timeline.firebaseio.com/content');
+    const contentRef = new Firebase(config.firebaseContent);
     contentRef.on('value', snap => console.log(snap.val()));
   }
   render() {
