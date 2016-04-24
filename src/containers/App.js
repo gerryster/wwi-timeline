@@ -6,7 +6,7 @@
  */
 import React, {
   Component,
-  PropTypes
+  PropTypes,
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
