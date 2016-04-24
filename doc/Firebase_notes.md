@@ -16,3 +16,24 @@ ref.orderByChild("startDate").startAt("1914-07").endAt("1914-07\uf8ff").on("chil
 1. Simple: fbRef.once("value", ...) and then dispatch a data loaded event with snapshot.val().
 1. Look into [ReactFire](https://www.firebase.com/docs/web/libraries/react/). Possibly not the best fit with Redux.
 1. One of the Redux Firebase libraries?
+
+## How to store app state
+
+```javascript
+{
+  currentWeek: {
+    duration: // Duration instance
+    content: {
+      // extracted from Firebase for the current week
+    }
+  },
+  content: {
+    /* https://wwi-timeline.firebaseio.com/content
+       For now listen to this using ref.on("value"...
+    */
+  },
+  contentStatus: {
+    isLoading: // true or false
+  }
+}
+```
