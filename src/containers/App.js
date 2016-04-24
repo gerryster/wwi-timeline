@@ -4,7 +4,10 @@
  *          This modifications only run once when the generator is invoked - if
  *          you edit them, they are not updated again.
  */
-import React, { Component, PropTypes } from 'react';
+import React, {
+  Component,
+  PropTypes
+} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from '../components/Main';
@@ -20,9 +23,7 @@ class App extends Component {
  * HINT: if you adjust the initial type of your reducer, you will also have to
  *       adjust it here.
  */
-App.propTypes = {
-  actions: PropTypes.object.isRequired,
-};
+App.propTypes = { actions: PropTypes.object.isRequired };
 function mapStateToProps() {
   /* Populated by react-webpack-redux:reducer */
   const props = {};
@@ -30,7 +31,7 @@ function mapStateToProps() {
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
+  const actions = { contentLoaded: require('../actions/contentLoaded.js') };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }

@@ -12,7 +12,10 @@ import React from 'react';
 class AppComponent extends React.Component {
   componentDidMount() {
     const contentRef = new Firebase(config.firebaseContent);
-    contentRef.on('value', snap => console.log(snap.val()));
+    contentRef.on('value', snap => {
+      console.log(snap.val())
+      this.props.actions.contentLoaded(snap.val())
+    });
   }
   render() {
     return (
