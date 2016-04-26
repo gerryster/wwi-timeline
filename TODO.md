@@ -4,11 +4,15 @@
   * [ ] create a unit test which verifies that when content is loaded, the data structure looks correct
   * [ ] embed the videos correctly
 
-# Features
-* [ ] TimelineWeek should remain highlighted when it is selected
+# Features/Roadmap
+* [ ] create a GUI for inputting videos
+  * [ ] get auth working
+* [ ] currentWeek reducer's initial state is last week minus 100 years
 * [ ] battles
+* [ ] soft launch on firebase (no custom domain)
 * [ ] Prelude to War and Aftermath sections
 * [ ] WYSIWYG content editing
+* [ ] TimelineWeek should remain highlighted when it is selected
 * [ ] Casualties graph
 
 # UI
