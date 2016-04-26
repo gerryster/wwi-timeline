@@ -1,5 +1,5 @@
 import { CONTENT_LOADED } from 'actions/ActionCreators';
 
-module.exports = function(parameter) {
-  return { type: CONTENT_LOADED, parameter };
+module.exports = function(content) {
+  return { type: CONTENT_LOADED, content };
 };

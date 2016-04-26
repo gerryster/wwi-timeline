@@ -1,7 +1,8 @@
 # Immediate
 * [ ] display current week content
-  * [ ] extract the currentWeek reducer into its own file
+  * [x] extract the currentWeek reducer into its own file
   * [ ] create a unit test which verifies that when content is loaded, the data structure looks correct
+  * [ ] embed the videos correctly
 
 # Features
 * [ ] TimelineWeek should remain highlighted when it is selected

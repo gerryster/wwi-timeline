@@ -20,6 +20,10 @@ ref.orderByChild("startDate").startAt("1914-07").endAt("1914-07\uf8ff").on("chil
 
 ## How to store app state
 
+### Initial Idea: pull the current week content into currentWeek
+
+Problem: this requires both the content and currentWeek reducers to know how to create the currentWeek content. One way to handle this would be for the content reducer to emit a SET_CURRENT_WEEK action so that currentWeek would fire and update its content. However, since reducers are pure functions they are prohibited from creating side effects such as dispatching actions. In fact, dispatching an action would result in an exception.
+
 ```javascript
 {
   currentWeek: {
@@ -36,5 +40,21 @@ ref.orderByChild("startDate").startAt("1914-07").endAt("1914-07\uf8ff").on("chil
   contentStatus: {
     isLoading: // true or false
   }
+}
+```
+
+### Second Idea:
+
+Have a helper function like getVisibleTodos which is the cursor over the current week content. This helper function would be used in mapStateToProps.
+
+```javascript
+{
+  currentWeek: { duration /* Duration instance */ },
+  content: {
+    isLoading: true,
+    /* https://wwi-timeline.firebaseio.com/content
+       For now listen to this using ref.on("value"...
+    */
+  },
 }
 ```

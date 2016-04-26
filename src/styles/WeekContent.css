@@ -2,3 +2,7 @@
   margin: 20px;
   text-align: center;
 }
+
+.week-content code {
+  display: block;
+}
