@@ -2,7 +2,7 @@ require('normalize.css');
 require('styles/App.css');
 
 import Timeline from './Timeline';
-import WeekContent from './WeekContent';
+import WeekContent from '../containers/WeekContent';
 
 import config from 'config';
 
