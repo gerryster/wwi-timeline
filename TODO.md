@@ -27,6 +27,8 @@
 * [ ] get `npm run test:dev` working
 * [ ] DRY up resolve in config/test.js
 * [ ] use ES6 classes
+* [ ] hook up a URL router
+ * https://github.com/reactjs/react-router-redux seems to do some automatic synching between the URL and Redux state.
 
 # Done
 * [x] Start pulling content from a DB
