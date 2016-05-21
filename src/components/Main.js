@@ -13,8 +13,8 @@ class AppComponent extends React.Component {
   componentDidMount() {
     Firebase.initializeApp(config.firebaseConnection);
 
-    const rootRef = Firebase.database().ref();
-    rootRef.on('value', snap => {
+    const contentRef = Firebase.database().ref('content');
+    contentRef.on('value', snap => {
       this.props.actions.contentLoaded(snap.val());
     });
   }
