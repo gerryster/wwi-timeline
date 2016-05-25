@@ -9,17 +9,17 @@ describe('WarYear', () => {
   describe('.allYearsInOrder() static method', () => {
     it('returns years 1914,1915,1916,1917, and 1918', () => {
       const foundYears = WarYear.allYearsInOrder().map((year) => year.year());
-      expect(foundYears).to.eql([1914,1915,1916,1917,1918]);
+      expect(foundYears).toEqual([1914,1915,1916,1917,1918]);
     });
   });
 
   describe('.numDays()', () => {
     it('returns 157 for 1914', () => {
-      expect(Y1914.numDays()).to.equal(157);
+      expect(Y1914.numDays()).toEqual(157);
     });
 
     it('returns 366 for 1916', () => {
-      expect(Y1916.numDays()).to.equal(366);
+      expect(Y1916.numDays()).toEqual(366);
     });
   });
 
@@ -36,7 +36,7 @@ describe('WarYear', () => {
       const foundMonths = Y1914.months().map((month) => (
         [month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')]
       ));
-      expect(expectedMonths).to.eql(foundMonths);
+      expect(expectedMonths).toEqual(foundMonths);
     });
 
     it('finds the correct months for 1918', () => {
@@ -56,7 +56,7 @@ describe('WarYear', () => {
       const foundMonths = Y1918.months().map((month) => (
         [month.startDate.format('YYYY-MM-DD'), month.endDate.format('YYYY-MM-DD')]
       ));
-      expect(expectedMonths).to.eql(foundMonths);
+      expect(expectedMonths).toEqual(foundMonths);
     });
   });
 });

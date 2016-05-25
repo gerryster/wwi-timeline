@@ -21,7 +21,7 @@ describe('WeekContent', () => {
       }
 
       const expectedProps = {currentWeek: state.currentWeek, content: state.content.week1 };
-      expect(mapStateToProps(state)).to.deepEqual(expectedProps);
+      expect(mapStateToProps(state)).toEqual(expectedProps);
     });
   });
 });
