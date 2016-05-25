@@ -1,9 +1,9 @@
 # Immediate
 * [ ] display current week content
   * [x] extract the currentWeek reducer into its own file
-  * [ ] create a unit test which verifies that when content is loaded, the data structure looks correct
+  * [x] create a unit test which verifies that when content is loaded, the data structure looks correct
   * [ ] embed the videos correctly
-* removed unused mocha and chi dependencies
+* [ ]removed unused mocha and chi dependencies
 
 # Features/Roadmap
 * [ ] create a GUI for inputting videos

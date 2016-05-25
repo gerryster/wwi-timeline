@@ -18,4 +18,10 @@ export default class Duration {
     // add one day to the end as this is inclusive:
     return this.endDate.add('1', 'days').diff(this.startDate, 'days');
   }
+
+  overlapsWith(startDate, endDate) {
+    const myStart = this.startDate.format('YYYY-MM-DD');
+    const myEnd   = this.endDate.format('YYYY-MM-DD');
+    return startDate <= myEnd && endDate >= myStart;
+  }
 }

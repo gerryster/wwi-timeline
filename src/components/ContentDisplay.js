@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 const propTypes = {
   duration: PropTypes.object,
-  content: PropTypes.object,
+  content: PropTypes.array,
 };
 
 const ContentDisplay = ({ duration, content }) => {
