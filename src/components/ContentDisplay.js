@@ -1,8 +1,8 @@
 require('styles/ContentDisplay.css');
-
-import React, { PropTypes } from 'react';
+import VideoContent from './VideoContent';
 
 import _ from 'lodash';
+import React, { PropTypes } from 'react';
 
 const propTypes = {
   duration: PropTypes.object,
@@ -21,7 +21,8 @@ const ContentDisplay = ({ duration, content }) => {
       {_.map(content, (contentItem, index) => {
         return (
           <div key={index}>
-            {contentItem.format === 'video' ? renderVideo(contentItem) : renderOther(contentItem)}
+            {contentItem.format === 'video' ? <VideoContent content={contentItem}/>
+                : renderOther(contentItem)}
           </div>
         )
       })}
@@ -36,23 +37,6 @@ function addNonStandardVideoAttributes(node) {
     node.setAttribute('frameborder', '0');
     node.setAttribute('allowfullscreen', '');
   }
-}
-
-function renderVideo(content) {
-  // TODO: figure out how to pass through the custom attributes:
-  return (
-    <iframe width="560" height="315"
-      src={`https://www.youtube.com/embed/${content.videoId}`}
-      ref={node => addNonStandardVideoAttributes(node)} />
-  );
-}
-
-function renderOther(content) {
-  return (
-    <div>
-      {_.map(content, (value, key) => <code key={key}>{key}: {JSON.stringify(value, null, 2)}</code>)}
-    </div>
-  );
 }
 
 ContentDisplay.propTypes = propTypes;

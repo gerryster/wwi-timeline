@@ -2,7 +2,8 @@
 * [ ] display current week content
   * [x] extract the currentWeek reducer into its own file
   * [x] create a unit test which verifies that when content is loaded, the data structure looks correct
-  * [ ] embed the videos correctly: figure out how to pass through custom attributes.
+  * [x] embed the videos correctly: figure out how to pass through custom attributes.
+  * [ ] show the current week as selected in the timeline
 * [ ]removed unused mocha and chi dependencies
 
 # Features/Roadmap
