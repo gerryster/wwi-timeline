@@ -11,15 +11,15 @@
   * [ ] get auth working
 * [ ] currentWeek reducer's initial state is last week minus 100 years
 * [ ] battles
-* [ ] soft launch on firebase (no custom domain)
+* [ ] clean up the week display labels in Timeline/Week. See http://jsbin.com/qeluce/3/edit?html,css,output
+* [ ] improve typeface
+* [ ] SOFT LAUNCH on firebase (no custom domain)
 * [ ] Prelude to War and Aftermath sections
 * [ ] WYSIWYG content editing
 * [ ] TimelineWeek should remain highlighted when it is selected
 * [ ] Casualties graph
 
 # UI
-* [ ] clean up the week display labels in Timeline/Week. See http://jsbin.com/qeluce/3/edit?html,css,output
-* [ ] improve typeface
 
 # Tech
 * [ ] move the connect logic into Timeline/Week
