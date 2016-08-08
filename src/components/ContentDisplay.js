@@ -18,18 +18,24 @@ const ContentDisplay = ({ duration, content }) => {
   return (
     <div className="content-display">
       {header}
-      {
-        _.map(content, (contentItem, index) => {
-          return (
-            <div key={index}>
-              {contentItem.format === 'video' ? renderVideo(contentItem) : renderOther(contentItem)}
-            </div>
-          )
-        })
-      }
+      {_.map(content, (contentItem, index) => {
+        return (
+          <div key={index}>
+            {contentItem.format === 'video' ? renderVideo(contentItem) : renderOther(contentItem)}
+          </div>
+        )
+      })}
     </div>
   );
 
+}
+
+function addNonStandardVideoAttributes(node) {
+  // see Dan Abromov's comment in https://github.com/facebook/react/issues/140 :
+  if(node) {
+    node.setAttribute('frameborder', '0');
+    node.setAttribute('allowfullscreen', '');
+  }
 }
 
 function renderVideo(content) {
@@ -37,8 +43,7 @@ function renderVideo(content) {
   return (
     <iframe width="560" height="315"
       src={`https://www.youtube.com/embed/${content.videoId}`}
-      frameborder="0" allowfullscreen={true}>
-    </iframe>
+      ref={node => addNonStandardVideoAttributes(node)} />
   );
 }
 
