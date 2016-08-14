@@ -31,12 +31,12 @@ const ContentDisplay = ({ duration, content }) => {
 
 }
 
-function addNonStandardVideoAttributes(node) {
-  // see Dan Abromov's comment in https://github.com/facebook/react/issues/140 :
-  if(node) {
-    node.setAttribute('frameborder', '0');
-    node.setAttribute('allowfullscreen', '');
-  }
+function renderOther(content) {
+  return (
+    <div>
+      {_.map(content, (value, key) => <code key={key}>{key}: {JSON.stringify(value, null, 2)}</code>)}
+    </div>
+  );
 }
 
 ContentDisplay.propTypes = propTypes;
