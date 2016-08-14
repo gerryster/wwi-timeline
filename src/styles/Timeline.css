@@ -67,6 +67,11 @@
   opacity: 0.4;
 }
 
+.timeline .week.current {
+  background: lightblue;
+  opacity: 0.4;
+}
+
 .timeline .week .label-header {
   display: none;
   position: absolute;

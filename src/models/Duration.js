@@ -24,4 +24,9 @@ export default class Duration {
     const myEnd   = this.endDate.format('YYYY-MM-DD');
     return startDate <= myEnd && endDate >= myStart;
   }
+
+  isSame(otherDuration) {
+    return this.startDate.isSame(otherDuration.startDate)
+        && this.endDate.isSame(otherDuration.endDate);
+  }
 }

@@ -1,17 +1,14 @@
 require('styles/Timeline.css');
 
-import Week from './Timeline/Week';
+import Week from '../containers/Timeline/Week';
 import Year from './Timeline/Year'
 
 import TimelineModel from 'models/Timeline';
 
 import React from 'react';
-import { connect } from 'react-redux';
 
 export const DAY_WIDTH = 2;
 const DAYS_IN_WAR = 1567;
-
-const ConnectedWeek = connect()(Week);
 
 class Timeline extends React.Component {
   render() {
@@ -25,7 +22,7 @@ class Timeline extends React.Component {
         </div>
         <div className="weeks-container" style={overallWidthCss}>
           {TimelineModel.allWeeks().map((weekDuration) => (
-            <ConnectedWeek weekDuration={weekDuration} key={weekDuration.startDate.format('YYYY-MM-DD')}/>
+            <Week duration={weekDuration} key={weekDuration.startDate.format('YYYY-MM-DD')}/>
           ))}
         </div>
       </div>
