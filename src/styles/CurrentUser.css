@@ -1,6 +1,6 @@
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
+.current-user {
+  position: absolute;
+  right: 5px;
+  top: -32px;
+  height: 32px;
 }

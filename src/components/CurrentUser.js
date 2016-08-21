@@ -10,8 +10,9 @@ import React from 'react';
 class CurrentUser extends React.Component {
   constructor(props) {
     super(props);
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
+    this.signIn = this.signIn.bind(this);
+    this.signOut = this.signOut.bind(this);
+    this.state = {userMenuIsOpen: false};
   }
   componentDidMount() {
     const {dispatch} = this.props;
@@ -49,16 +50,16 @@ class CurrentUser extends React.Component {
     });
   }
 
-  login() {
-    console.log("attempting login");
+  signIn() {
+    console.log("attempting signIn");
     Firebase.auth().signInWithRedirect(this.provider);
   }
 
-  logout() {
+  signOut() {
     Firebase.auth().signOut().then(function() {
-      console.log("logout successful");
+      console.log("signOut successful");
     }, function(error) {
-      console.error("unable to logout: ", error);
+      console.error("unable to signOut: ", error);
     });
   }
 
@@ -67,10 +68,29 @@ class CurrentUser extends React.Component {
     console.log("this.props.user: ", user);
     return (
       <div className="current-user">
-        <button onClick={this.login}>Sign In</button>
-        <button onClick={this.logout}>Sign Out</button>
+        {user ? this.renderAuthenticated(user) : this.renderNoUser()}
       </div>
     );
+  }
+
+  renderAuthenticated(user) {
+    return (
+      <div>
+        { /* TODO: improve the closing of the user menu to support clicking outside of
+          the modal and the escape key. */ }
+        <img height="32" width="32" src={user.photoURL}
+             onClick={() => this.setState({userMenuIsOpen: !this.state.userMenuIsOpen})}/>
+        {this.state.userMenuIsOpen && this.renderUserMenu(user)}
+      </div>
+    );
+  }
+
+  renderUserMenu(user) {
+    return <button onClick={this.signOut}>Sign Out of WWI Timeline</button>
+  }
+
+  renderNoUser() {
+    return <button onClick={this.signIn}>Sign In</button>;
   }
 }
 
