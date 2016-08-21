@@ -1,6 +1,31 @@
 .current-user {
   position: absolute;
-  right: 5px;
-  top: -32px;
+  right: 20px;
+  top: 20px;
   height: 32px;
+}
+
+.current-user a {
+  color: grey;
+}
+
+.current-user img {
+  margin: 0;
+}
+
+.current-user .user-menu {
+  z-index: 200;
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.current-user .user-menu img {
+  text-align: center;
+  display: block;
+  margin: 5px;
+}
+
+.current-user .user-menu p {
+  text-align: center;
 }

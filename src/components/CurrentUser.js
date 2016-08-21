@@ -12,6 +12,7 @@ class CurrentUser extends React.Component {
     super(props);
     this.signIn = this.signIn.bind(this);
     this.signOut = this.signOut.bind(this);
+    this.toggleMenuOpen = this.toggleMenuOpen.bind(this);
     this.state = {userMenuIsOpen: false};
   }
   componentDidMount() {
@@ -50,7 +51,8 @@ class CurrentUser extends React.Component {
     });
   }
 
-  signIn() {
+  signIn(e) {
+    e.preventDefault();
     console.log("attempting signIn");
     Firebase.auth().signInWithRedirect(this.provider);
   }
@@ -73,24 +75,41 @@ class CurrentUser extends React.Component {
     );
   }
 
+  toggleMenuOpen() {
+    this.setState({userMenuIsOpen: !this.state.userMenuIsOpen});
+  }
+
   renderAuthenticated(user) {
+    let content;
+    if(this.state.userMenuIsOpen) {
+      content = this.renderUserMenu(user);
+    } else {
+      content = <img height="32" width="32" src={user.photoURL} onClick={this.toggleMenuOpen}/>;
+    }
+
     return (
       <div>
         { /* TODO: improve the closing of the user menu to support clicking outside of
           the modal and the escape key. */ }
-        <img height="32" width="32" src={user.photoURL}
-             onClick={() => this.setState({userMenuIsOpen: !this.state.userMenuIsOpen})}/>
-        {this.state.userMenuIsOpen && this.renderUserMenu(user)}
+        {content}
       </div>
     );
   }
 
   renderUserMenu(user) {
-    return <button onClick={this.signOut}>Sign Out of WWI Timeline</button>
+    return (
+      <div className="user-menu" onClick={this.toggleMenuOpen}>
+        <button onClick={this.signOut}>Sign Out of WWI Timeline</button>
+        <div>
+          <img height="96" width="96" src={user.photoURL} />
+          <p>{user.displayName}</p>
+        </div>
+      </div>
+    )
   }
 
   renderNoUser() {
-    return <button onClick={this.signIn}>Sign In</button>;
+    return <a onClick={this.signIn} href="">Sign In</a>;
   }
 }
 
