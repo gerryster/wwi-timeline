@@ -1,10 +1,14 @@
 # Immediate
-* [ ] create a GUI for inputting videos
-  * [ ] get auth working
-  * [ ] add a modal dialog to house the input form
-  * [ ] create the video input form
+* [ ] get auth working
+  * [ ] clean up logging
+  * [ ] bring in react bootstrap
+  * [ ] display errors
+  * [ ] figure out Firebase user permissions
 
 # Features/Roadmap
+* [ ] create a GUI for inputting videos
+  * [ ] add a modal dialog to house the input form
+  * [ ] create the video input form
 * [ ] Input Videos!
 * [ ] currentWeek reducer's initial state is last week minus 100 years
 * [ ] battles
@@ -17,6 +21,7 @@
 * [ ] Casualties graph
 
 # UI
+* [ ] improve the auth UI
 
 # Tech
 * [ ] setup the Redux devtools: https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
