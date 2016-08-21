@@ -7,7 +7,7 @@
   height: var(--timeline-height);
   overflow: scroll;
   width: 100%;
-  //position: relative;
+  position: relative; /* allows the timeline to scroll */
 }
 
 .timeline .duration {
