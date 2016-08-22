@@ -3551,11 +3551,6 @@
       "from": "mute-stream@0.0.5",
       "resolved": "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.5.tgz"
     },
-    "nan": {
-      "version": "2.4.0",
-      "from": "nan@>=2.3.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/nan/-/nan-2.4.0.tgz"
-    },
     "negotiator": {
       "version": "0.4.9",
       "from": "negotiator@0.4.9",
